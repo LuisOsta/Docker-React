@@ -10,5 +10,6 @@ RUN ["npm", "run", "build"]
 
 # RUN STEP.
 # The NGINX container will automatically startup the server based on whats on the html dir
-FROM nginx 
+FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
