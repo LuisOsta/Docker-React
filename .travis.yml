@@ -4,7 +4,6 @@ services:
 
 before_install:
   - docker build -t losta/docker-react -f Dockerfile.dev .
-# docker run -e CI=true USERNAME/docker-react npm run test
 
 script:
   - docker run -e CI=true USERNAME/docker-react npm run test
